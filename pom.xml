@@ -4,7 +4,7 @@
   <groupId>com.jacksonville.app</groupId>
   <artifactId>my-jacksonvilleapp2</artifactId>
   <packaging>jar</packaging>
-  <version>1.1-SNAPSHOT-JKVE2</version>
+  <version>1.2-SNAPSHOT-JKVE2</version>
   <name>my-jacksonvilleapp2</name>
   <url>http://maven.apache.org</url>
   <properties>
