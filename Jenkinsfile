@@ -42,7 +42,7 @@ pipeline {
                 sh 'mvn package'
 		sh 'mvn install'
                 sh 'echo "publish to artifactory ok"'
-                // hygieiaArtifactPublishStep artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2"
+                hygieiaArtifactPublishStep artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2"
             } 
         }
         stage('Deploy to DEV') {
@@ -52,11 +52,11 @@ pipeline {
             post { 
                 success {
 		    sh 'echo test'	
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'DEV'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'DEV'
                 }
                 failure {
 		    sh 'echo test' 	
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'DEV'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'DEV'
                 }
             }
         }
@@ -67,11 +67,11 @@ pipeline {
             post { 
                 success {
 		    sh 'echo test'	
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'QA'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'QA'
                 }
                 failure { 
 		    sh 'echo test'	
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'QA'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'QA'
                 }
             }
         }
@@ -82,11 +82,11 @@ pipeline {
             post { 
                 success {
 		    sh 'echo test'	
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'STAGE'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'STAGE'
                 }
                 failure {
 		    sh 'echo test'
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'STAGE'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'STAGE'
                 }
             }
         }
@@ -97,11 +97,11 @@ pipeline {
             post { 
                 success {
 		    sh 'echo test'
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'PROD'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Success', environmentName: 'PROD'
                 }
                 failure {
 		    sh 'echo test'
-                    // hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'PROD'
+                    hygieiaDeployPublishStep applicationName: 'my-jacksonvilleapp2', artifactDirectory: 'target', artifactGroup: 'com.jacksonville.app', artifactName: '*.jar', artifactVersion: "1.2-SNAPSHOT-JKVE2", buildStatus: 'Failure', environmentName: 'PROD'
                 }
             }
         }
