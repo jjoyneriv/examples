@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'babylon', url: 'git@github.com:jjoyneriv/examples.git']]])
+		sh 'echo test'    
+                // checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'babylon', url: 'git@github.com:jjoyneriv/examples.git']]])
             }
         }    
         stage('Clean') {
